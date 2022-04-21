@@ -116,7 +116,7 @@ textarea {
 .navi-item-link:focus {
   color: var(--accent-color);
 }
-.navi-item-link::after {
+.current::after {
   content: "";
   position: absolute;
   width: 100%; 
@@ -125,12 +125,7 @@ textarea {
   bottom: -1px;
   left: 0;
   border-radius: 2px;
-  opacity: 0;
   transition: var(--animation);
-}
-.navi-item-link:hover::after,
-.navi-item-link:focus::after{
-  opacity: 1;
 
 }
 .navi-contact {
@@ -221,6 +216,7 @@ textarea {
   transition: opacity 500ms;
 }
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -258,7 +254,6 @@ textarea {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
   color: var(--primery-text-color);
   letter-spacing: 0.03rem;
 
@@ -275,7 +270,7 @@ textarea {
 
 }
 .form-field {
-  margin-bottom: 10px;
+  
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -283,6 +278,10 @@ textarea {
   position: relative;
 
 }
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .field-label {
   margin-bottom: 4px;
 }
@@ -767,6 +766,8 @@ textarea {
   fill: var(--primery-white-color);
 }
 .email-input {
+  padding: 0;
+  color: var(--primery-text-color);
   height: 86px;
   margin-left: 93px;
 
@@ -789,7 +790,11 @@ textarea {
   border-radius: 4px;
   padding-left: 16px;
   background: inherit;
+  color: var(--primery-text-color);
 
+}
+.footer-email:focus {
+  border: 1px solid var(--accent-color);
 }
 .email-btn {
   align-items: center;
